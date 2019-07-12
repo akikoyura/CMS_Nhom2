@@ -13,6 +13,7 @@ public class Member {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "MemberId")
 	private long Id;
 	
 	@Column(name = "Firstname")
@@ -21,7 +22,7 @@ public class Member {
 	@Column(name = "Lastname")
 	private String lastName;
 	
-	@Column(name = "Password")
+	@Column(name = "Passwords")
 	private String password;
 	
 	@Column(name = "Username")
@@ -41,6 +42,17 @@ public class Member {
 	
 	@Column(name = "UpdateTime")
 	private String updateTime;
+	
+	@Column(name = "RoleId")
+	private String roleId;
+	
+	public String getRoleId() {
+		return roleId;
+	}
+
+	public void setRoleId(String roleId) {
+		this.roleId = roleId;
+	}
 
 	public long getId() {
 		return Id;
@@ -123,7 +135,7 @@ public class Member {
 	}
 
 	public Member(long id, String firstName, String lastName, String password, String userName, String email,
-			String phone, String description, String createDate, String updateTime) {
+			String phone, String description, String createDate, String updateTime, String roleId) {
 		super();
 		Id = id;
 		this.firstName = firstName;
@@ -135,6 +147,7 @@ public class Member {
 		this.description = description;
 		this.createDate = createDate;
 		this.updateTime = updateTime;
+		this.roleId = roleId;
 	}
 
 	public Member() {

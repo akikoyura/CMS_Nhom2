@@ -13,7 +13,7 @@ public class Content {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Id")
+	@Column(name = "ContentId")
 	private long id;
 	
 	@Column(name = "Title")

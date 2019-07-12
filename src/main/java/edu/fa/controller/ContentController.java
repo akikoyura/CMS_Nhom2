@@ -15,6 +15,7 @@ public class ContentController {
 	
 	@Autowired
 	private ContentService contentService;
+	
 	@GetMapping(value = "/Viewscontent")
 	public String listContent(Model model)
 	{
@@ -22,4 +23,5 @@ public class ContentController {
 		model.addAttribute("contents",theContents);
 		return "View-Contents";
 	}
+	
 }
